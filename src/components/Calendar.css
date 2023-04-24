@@ -1,0 +1,102 @@
+.calendar-wrapper {
+	position: relative;
+	top: 2rem;
+	margin: 0 1rem 2rem 1rem;
+	background-color: white;
+	/* width: 400px; */
+	border-radius: 10px;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.today-div {
+	width: 40%;
+	border: 2px solid #594fdd;
+	border-radius: 10px;
+	margin: -1rem auto 0;
+	padding: 0.25rem 0.5rem;
+	color: white;
+	font-weight: semibold;
+	position: relative;
+	top: -15px;
+	background-color: #bdb9f3;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+	cursor: pointer;
+}
+
+.change-month {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+	color: #594fdd;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.toggle-month {
+	font-size: 2.5rem;
+	cursor: pointer;
+	color: #bdb9f3;
+}
+
+.calendar-grid {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.calendar-heading {
+	font-size: 1.25rem;
+	color: #bdb9f3;
+}
+
+.calendar-days {
+	display: grid;
+	justify-content: center;
+	height: 45px;
+}
+
+.notCurrentMonth {
+	color: #c2c2c2;
+}
+
+.currentMonth {
+	color: #464646;
+	font-weight: 600;
+}
+
+.today {
+	border: 2px solid #594fdd;
+}
+
+.allDays {
+	display: grid;
+	justify-content: center;
+	text-align: center;
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	line-height: 40px;
+	align-self: center;
+	margin: 0;
+	cursor: pointer;
+}
+
+.allDays:hover,
+.selected {
+	background-color: #bdb9f3;
+	color: white;
+	transition: all 0.3s;
+}
+
+.calendar-grid div:nth-child(7n) p.currentMonth {
+	color: #bdb9f3;
+}
+
+.calendar-grid div:nth-child(7n) p.currentMonth:hover,.calendar-grid div:nth-child(7n) p.currentMonth.selected {
+	color: white;
+	background-color: #bdb9f3;
+}
